@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Accendio</title>
+	<link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+
+</head>
+<body>
+	<header>
+		<img class="mylogo" title="Logo" alt="Logo" src="Images/mylogo.png"/>
+		    <h1 class="homeheader">Report Analysis</h1>
+                <nav>
+					<a href="home.html">Home</a>
+					<a href="report.html">Report</a>
+                </nav>
+	</header>
+	<main>
+        <div class="uploadButton">
+                <button class="btn">Upload a file</button>
+                <input type="file" name="myfile" />
+                <!-- <button type="submit" action="submitDoc();">Submit</button> -->
+                <button onclick="submitDoc()">Submit</button> <!-- When submit button is clicked, execute submitDoc js function -->
+                                                              <!-- This button and it's functionality simulates the microservice/SAAS interaction
+                                                                   that a customer would have with our machine learning backend-->
+        </div>
+	    <div id="reportTable" style="visibility: hidden"> <!-- This table stays hidden until the submit button is clicked -->
+            <table id="report"> <!-- The contents of these tables is the output of the machine learning algorithm -->
+                <tbody>
+                        <tr>
+                                <th>Feature</th>
+                                <th>Risk Category</th>
+                                <th>Score</th>
+                                <th>Document ID</th>
+                                <th>Page No</th>
+                            </tr>
+                            <tr>
+                                <td>Development: Netbeans 6.8 +  Grails 1.2.1</td>
+                                <td>TechDebt</td>
+                                <td>0.6</td>
+                                <td>76758</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Diagrams: Visio 2007 / ConceptDraw Pro (Mac)</td>
+                                <td>TechDebt</td>
+                                <td>0.4</td>
+                                <td>76758</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Database Management: MySQL Workbench:</td>
+                                <td>Architecture</td>
+                                <td>0.3</td>
+                                <td>76758</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Database: MySQL 5</td>
+                                <td>TechDebt</td>
+                                <td>0.7</td>
+                                <td>76758</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Server: Windows Server 2008</td>
+                                <td>Security</td>
+                                <td>0.75</td>
+                                <td>76758</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Server: Apache Tomcat 6</td>
+                                <td>TechDebt</td>
+                                <td>0.5</td>
+                                <td>76758</td>
+                                <td>7</td>
+                            </tr>
+                </tbody>
+            </table> 
+        </div>
+       
+	</main>
+        <footer>
+            <p>© 2019 Accendio Hackathon</p>
+                <div>
+                    <a href="team.html">The Team</a> <!-- A page to represent our team -->
+                </div>
+        </footer>
+    </body>
+    <script src="script.js"></script>
+</html>
